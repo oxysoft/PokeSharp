@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC9B3ACA-24A9-4F5A-978B-2123FA677FCB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapEditor</RootNamespace>
+    <AssemblyName>MapEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastColoredTextBox, Version=2.9.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Programming Resources\Resource\Libraries\FastColoredTextBox\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="IniFileParser">
+      <HintPath>..\..\..\..\Programming Resources\Resource\Libraries\INI parser\IniFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CopyPaste\CopyPasteManager.cs" />
+    <Compile Include="Forms\Form Selectors\FrmTileBehaviorSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmTileBehaviorSelector.Designer.cs">
+      <DependentUpon>FrmTileBehaviorSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Tools\FrmPictureChopper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Tools\TextureExtractorTool.Designer.cs">
+      <DependentUpon>FrmPictureChopper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAnimationEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAnimationEditor.Designer.cs">
+      <DependentUpon>FrmAnimationEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDatabase.Designer.cs">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGameTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGameTest.Designer.cs">
+      <DependentUpon>FrmGameTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmResourceExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmResourceExport.Designer.cs">
+      <DependentUpon>FrmResourceExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmResourceImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmResourceImport.Designer.cs">
+      <DependentUpon>FrmResourceImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmResourceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmResourceManager.Designer.cs">
+      <DependentUpon>FrmResourceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewMap.Designer.cs">
+      <DependentUpon>FrmNewMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewRegion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewRegion.Designer.cs">
+      <DependentUpon>FrmNewRegion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmEntitySelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmEntitySelector.Designer.cs">
+      <DependentUpon>FrmEntitySelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmLogicTileSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmLogicTileSelector.Designer.cs">
+      <DependentUpon>FrmLogicTileSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmTilesetSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Selectors\FrmTilesetSelector.Designer.cs">
+      <DependentUpon>FrmTilesetSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAnnoyingPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAnnoyingPrompt.Designer.cs">
+      <DependentUpon>FrmAnnoyingPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEntityTemplateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEntityTemplateEditor.Designer.cs">
+      <DependentUpon>FrmEntityTemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMainEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMainEditor.Designer.cs">
+      <DependentUpon>FrmMainEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Tools\FrmTileIndexHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Tools\FrmTileIndexHelper.Designer.cs">
+      <DependentUpon>FrmTileIndexHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTilesetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTilesetEditor.Designer.cs">
+      <DependentUpon>FrmTilesetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form Tools\FrmTilesetUtil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form Tools\FrmTilesetUtil.Designer.cs">
+      <DependentUpon>FrmTilesetUtil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUndoRedoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUndoRedoList.Designer.cs">
+      <DependentUpon>FrmUndoRedoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="States\EntityEditor\EntityEditorState.cs" />
+    <Compile Include="States\EntityEditor\EntityMoveTool.cs" />
+    <Compile Include="States\EntityEditor\EntityRectangleTool.cs" />
+    <Compile Include="States\EntityEditor\EntityAddTool.cs" />
+    <Compile Include="States\EntityEditor\EntityRemoveTool.cs" />
+    <Compile Include="States\EntityEditor\EntitySelectAllTool.cs" />
+    <Compile Include="States\EntityEditor\EntitySelectionTool.cs" />
+    <Compile Include="States\EventEditor\EventEditorState.cs" />
+    <Compile Include="States\EventEditor\EventTool.cs" />
+    <Compile Include="States\General\MoveTool.cs" />
+    <Compile Include="States\PermissionEditor\PermissionEditorState.cs" />
+    <Compile Include="States\StartupState.cs" />
+    <Compile Include="States\State.cs" />
+    <Compile Include="States\BehaviorEditor\BehaviorEditorState.cs" />
+    <Compile Include="States\BehaviorEditor\TileBehaviorTool.cs" />
+    <Compile Include="States\TileEditor\BucketTool.cs" />
+    <Compile Include="States\TileEditor\EraserTool.cs" />
+    <Compile Include="States\TileEditor\LogicBrushTool.cs" />
+    <Compile Include="States\TileEditor\Logic\LogicBucketTool.cs" />
+    <Compile Include="States\TileEditor\Logic\LogicPathTool.cs" />
+    <Compile Include="States\TileEditor\Logic\LogicPencilTool.cs" />
+    <Compile Include="States\TileEditor\Logic\LogicRectangleTool.cs" />
+    <Compile Include="States\TileEditor\PencilTool.cs" />
+    <Compile Include="States\TileEditor\RectangleTool.cs" />
+    <Compile Include="States\TileEditor\TileEditorState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MapEditor.Data\MapEditor.Data.csproj">
+      <Project>{c5a64501-b9cb-4d4e-9179-e7dfbc9f2ab8}</Project>
+      <Name>MapEditor.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MapEditor.UI\MapEditor.UI.csproj">
+      <Project>{7c826574-2876-4cd1-8341-ad404fee8fe7}</Project>
+      <Name>MapEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Editor\General.Graphics.csproj">
+      <Project>{9b083c31-4227-40ed-86c3-420e271c35d7}</Project>
+      <Name>General.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameEngine.Data\GameEngine.Data.csproj">
+      <Project>{a5ace26c-cf68-4909-8dd2-3370b51315ae}</Project>
+      <Name>GameEngine.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameEngine\GameEngine\GameEngine.csproj">
+      <Project>{891064f1-e02a-43a1-8d75-4b37ce43fbf5}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{f148b2ed-2ca5-489c-91a5-c9e95e6cfd82}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Form Selectors\FrmTileBehaviorSelector.resx">
+      <DependentUpon>FrmTileBehaviorSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Tools\FrmPictureChopper.resx">
+      <DependentUpon>FrmPictureChopper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAnimationEditor.resx">
+      <DependentUpon>FrmAnimationEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDatabase.resx">
+      <DependentUpon>FrmDatabase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGameTest.resx">
+      <DependentUpon>FrmGameTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewMap.resx">
+      <DependentUpon>FrmNewMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmResourceExport.resx">
+      <DependentUpon>FrmResourceExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmResourceImport.resx">
+      <DependentUpon>FrmResourceImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmResourceManager.resx">
+      <DependentUpon>FrmResourceManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewRegion.resx">
+      <DependentUpon>FrmNewRegion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Selectors\FrmEntitySelector.resx">
+      <DependentUpon>FrmEntitySelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Selectors\FrmLogicTileSelector.resx">
+      <DependentUpon>FrmLogicTileSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Selectors\FrmTilesetSelector.resx">
+      <DependentUpon>FrmTilesetSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAnnoyingPrompt.resx">
+      <DependentUpon>FrmAnnoyingPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEntityTemplateEditor.resx">
+      <DependentUpon>FrmEntityTemplateEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMainEditor.resx">
+      <DependentUpon>FrmMainEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Tools\FrmTileIndexHelper.resx">
+      <DependentUpon>FrmTileIndexHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSettings.resx">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTilesetEditor.resx">
+      <DependentUpon>FrmTilesetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form Tools\FrmTilesetUtil.resx">
+      <DependentUpon>FrmTilesetUtil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUndoRedoList.resx">
+      <DependentUpon>FrmUndoRedoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\question2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scissors-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scripts-text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selection-select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sofa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sofa--minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sofa--pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sofa--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table-split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tiles_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree--arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree--exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree--minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree--pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tree-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\world1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wrench-screwdriver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-return-000-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-return-180-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-skip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-turn-000-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-turn-180-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balloon-ellipsis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\board-game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_open2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brain2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bucket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\building.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard-paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comment_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cursor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document--pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document--pencil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\film.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\film--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer-select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layer-shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lighthouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map--minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map--pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paint-can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier-zoom-fit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruit-grape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk--arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier-zoom-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier-zoom-out.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

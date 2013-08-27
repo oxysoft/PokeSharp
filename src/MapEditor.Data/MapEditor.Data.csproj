@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5A64501-B9CB-4D4E-9179-E7DFBC9F2AB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapEditor.Data</RootNamespace>
+    <AssemblyName>MapEditor.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\ActionIO.cs" />
+    <Compile Include="Actions\ActionManager.cs" />
+    <Compile Include="Actions\IAction.cs" />
+    <Compile Include="Actions\MultiAction.cs" />
+    <Compile Include="Actions\Object\AddEntityAction.cs" />
+    <Compile Include="Actions\Object\MultipleRemoveEntityAction.cs" />
+    <Compile Include="Actions\Object\RemoveEntityAction.cs" />
+    <Compile Include="Actions\TilePermissions\SetTileBehaviorAction.cs" />
+    <Compile Include="Actions\Tile\FillAction.cs" />
+    <Compile Include="Actions\Tile\Logic\LogicFillAction.cs" />
+    <Compile Include="Actions\Tile\Logic\LogicPathAction.cs" />
+    <Compile Include="Actions\Tile\Logic\LogicPathSquare.cs" />
+    <Compile Include="Actions\Tile\Logic\LogicRectangleAction.cs" />
+    <Compile Include="Actions\Tile\Logic\LogicSetAction.cs" />
+    <Compile Include="Actions\Tile\RectangleAction.cs" />
+    <Compile Include="Actions\Tile\SetTileAction.cs" />
+    <Compile Include="Controls\EditorView\ControlAnimationEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlEditorView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlEntityEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlEntitySelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\FluentScrolling.cs" />
+    <Compile Include="Controls\EditorView\GameControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlGameEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\GraphicsDeviceService.cs" />
+    <Compile Include="Controls\EditorView\ControlLogicSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlAssembledMaps.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ServiceContainer.cs" />
+    <Compile Include="Controls\EditorView\ControlTextureExtractor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTextureViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTileBehaviorSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTilesetEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTilesetSplitterUtil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTilesetSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EditorView\ControlTilesetSpriteIndexHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EditorEngine.cs" />
+    <Compile Include="GameBuilder.cs" />
+    <Compile Include="Interface\Controls\PokeButton.cs" />
+    <Compile Include="Interface\PokeControl.cs" />
+    <Compile Include="Interface\ScreenInterface.cs" />
+    <Compile Include="Interface\Screens\EditorInterface.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TileLogicNew\LogicEvalInfo.cs" />
+    <Compile Include="TileLogicNew\TileLogicManager.cs" />
+    <Compile Include="TileLogicNew\TileLogicScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Editor\General.Graphics.csproj">
+      <Project>{9b083c31-4227-40ed-86c3-420e271c35d7}</Project>
+      <Name>General.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameEngine.Data\GameEngine.Data.csproj">
+      <Project>{A5ACE26C-CF68-4909-8DD2-3370B51315AE}</Project>
+      <Name>GameEngine.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{f148b2ed-2ca5-489c-91a5-c9e95e6cfd82}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\con_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ox.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

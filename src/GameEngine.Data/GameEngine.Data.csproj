@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5ACE26C-CF68-4909-8DD2-3370B51315AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameEngine.Data</RootNamespace>
+    <AssemblyName>GameEngine.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jint">
+      <HintPath>..\..\..\..\Programming Resources\Resource\Libraries\Jint\Jint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Noesis.Javascript">
+      <HintPath>..\..\..\..\Programming Resources\Resource\Libraries\javascript.net\Noesis.Javascript.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\Cheats\CheatItem.cs" />
+    <Compile Include="Custom\Cheats\CheatManager.cs" />
+    <Compile Include="Custom\Cheats\Cheat.cs" />
+    <Compile Include="Custom\Cheats\CheatMoreExp.cs" />
+    <Compile Include="Custom\Cheats\CheatPokemonModifier.cs" />
+    <Compile Include="Custom\Cheats\CheatWalkEverywhere.cs" />
+    <Compile Include="Common\Map.cs" />
+    <Compile Include="Tiles\MockupTile.cs" />
+    <Compile Include="Common\View\Camera.cs" />
+    <Compile Include="Common\World.cs" />
+    <Compile Include="Common\View\WorldView.cs" />
+    <Compile Include="Data\Battles\Abilities\Ability.cs" />
+    <Compile Include="Data\Battles\Abilities\IAbility.cs" />
+    <Compile Include="Data\DataLoader.cs" />
+    <Compile Include="Data\Pokemons\Data\EvolutionData.cs" />
+    <Compile Include="Data\Pokemons\Data\Gender.cs" />
+    <Compile Include="Data\Pokemons\Data\GenderRate.cs" />
+    <Compile Include="Data\Pokemons\Data\PokemonInfo.cs" />
+    <Compile Include="Data\Pokemons\Data\PokemonInfoManager.cs" />
+    <Compile Include="Data\Pokemons\Data\PokeType.cs" />
+    <Compile Include="Data\Pokemons\Data\XpCurve.cs" />
+    <Compile Include="Data\Pokemons\Wild\WildPokemonInfo.cs" />
+    <Compile Include="Data\Pokemons\Wild\WildPokemonManager.cs" />
+    <Compile Include="Debugging\ICommand.cs" />
+    <Compile Include="Debugging\GameConsole.cs" />
+    <Compile Include="Entities\Core\EntityTemplateFactory.cs" />
+    <Compile Include="Entities\Living\Effects\EffectIO.cs" />
+    <Compile Include="Entities\Living\Npcs\MovementBehavior.cs" />
+    <Compile Include="Entities\Living\Npcs\MovementFrequency.cs" />
+    <Compile Include="Entities\Living\Npcs\MovementPattern.cs" />
+    <Compile Include="Entities\Types\NPCEntity.cs" />
+    <Compile Include="Text\Fonts\CharInfo.cs" />
+    <Compile Include="Text\Fonts\CharOffsetTable.cs" />
+    <Compile Include="Text\Fonts\Font.cs" />
+    <Compile Include="Text\Fonts\FontRenderer.cs" />
+    <Compile Include="SpriteLibrary\ISpriteLibraryNode.cs" />
+    <Compile Include="SpriteLibrary\SpriteLibrary.cs" />
+    <Compile Include="Entities\Collision\CollisionMap.cs" />
+    <Compile Include="Entities\Collision\ICollisionHandler.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\EntityIO.cs" />
+    <Compile Include="Entities\EntityType.cs" />
+    <Compile Include="Entities\Living\Core\Facing.cs" />
+    <Compile Include="Entities\Living\Core\ILiving.cs" />
+    <Compile Include="Entities\Living\Core\Movement.cs" />
+    <Compile Include="Entities\Living\Core\MovementSpeed.cs" />
+    <Compile Include="Entities\Living\Core\MovementState.cs" />
+    <Compile Include="Entities\Living\Effects\IEffect.cs" />
+    <Compile Include="Entities\Living\Effects\LockEffect.cs" />
+    <Compile Include="Entities\Types\PlayerEntity.cs" />
+    <Compile Include="Entities\Living\LivingController.cs" />
+    <Compile Include="Entities\Living\LivingEntity.cs" />
+    <Compile Include="Entities\MapEntity.cs" />
+    <Compile Include="Entities\Core\EntityContainer.cs" />
+    <Compile Include="Entities\Core\EntityTemplate.cs" />
+    <Compile Include="Entities\ShadowType.cs" />
+    <Compile Include="Entities\Types\BuildingEntity.cs" />
+    <Compile Include="Entities\World\IEntityFactory.cs" />
+    <Compile Include="Entities\World\IRegionEntityFactory.cs" />
+    <Compile Include="Entities\World\WorldEntityFactory.cs" />
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="GameLoader\GameData.cs" />
+    <Compile Include="GameLoader\MapData.cs" />
+    <Compile Include="GameLoader\RegionData.cs" />
+    <Compile Include="Input\InputHandler.cs" />
+    <Compile Include="Input\InputState.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="Player\PlayerData.cs" />
+    <Compile Include="Player\Pokemon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpriteLibrary\SpriteLibraryDirectory.cs" />
+    <Compile Include="SpriteLibrary\SpriteLibrarySprite.cs" />
+    <Compile Include="Scenes\SceneState.cs" />
+    <Compile Include="Scripting\IScriptContainer.cs" />
+    <Compile Include="Scripting\PlayerInteraction.cs" />
+    <Compile Include="Scripting\UserInterface\InterfaceInteraction.cs" />
+    <Compile Include="Scripting\UserInterface\UI.cs" />
+    <Compile Include="Scripting\UserInterface\UIContainer.cs" />
+    <Compile Include="Scripting\UserInterface\UIManager.cs" />
+    <Compile Include="Scripting\UserInterface\UITemplate.cs" />
+    <Compile Include="Text\LineInfo.cs" />
+    <Compile Include="Tiles\Behaviors\MockupTileBehavior.cs" />
+    <Compile Include="Tiles\Behaviors\TileBehaviorCollection.cs" />
+    <Compile Include="Tiles\IResourceContainer.cs" />
+    <Compile Include="Tiles\MockupTileset.cs" />
+    <Compile Include="Tiles\Tile.cs" />
+    <Compile Include="Tiles\Behaviors\TileBehavior.cs" />
+    <Compile Include="Tiles\Tileset.cs" />
+    <Compile Include="Tiles\TilesetContainer.cs" />
+    <Compile Include="Tiles\TilesetFactory.cs" />
+    <Compile Include="Util\BoxUtil.cs" />
+    <Compile Include="Scenes\GameScene.cs" />
+    <Compile Include="Scenes\MenuScene.cs" />
+    <Compile Include="Scenes\IScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Editor\General.Graphics.csproj">
+      <Project>{9B083C31-4227-40ED-86C3-420E271C35D7}</Project>
+      <Name>General.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\General\General.csproj">
+      <Project>{F148B2ED-2CA5-489C-91A5-C9E95E6CFD82}</Project>
+      <Name>General</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

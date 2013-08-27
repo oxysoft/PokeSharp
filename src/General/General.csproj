@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F148B2ED-2CA5-489C-91A5-C9E95E6CFD82}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>General</RootNamespace>
+    <AssemblyName>General</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ThreadInvoker.cs" />
+    <Compile Include="Encoding\BackwardCompatibility\NamedCompound.cs" />
+    <Compile Include="Encoding\BackwardCompatibility\NamedVariable.cs" />
+    <Compile Include="Encoding\BackwardCompatibility\NamedVariableIO.cs" />
+    <Compile Include="Encoding\BinaryInput.cs" />
+    <Compile Include="Encoding\BinaryOutput.cs" />
+    <Compile Include="Encoding\EncoderUtil.cs" />
+    <Compile Include="Encoding\IBinaryIO.cs" />
+    <Compile Include="Encoding\IEncodable.cs" />
+    <Compile Include="Common\Static.cs" />
+    <Compile Include="Encoding\Object\IObjectIO.cs" />
+    <Compile Include="Encoding\Object\IObjectReader.cs" />
+    <Compile Include="Encoding\Object\IObjectWriter.cs" />
+    <Compile Include="Extensions\Action\ActionExtensions.cs" />
+    <Compile Include="Extensions\Effect\EffectExtensions.cs" />
+    <Compile Include="Extensions\Enum\EnumExtensions.cs" />
+    <Compile Include="Extensions\EventHandler\EventHandlerExtensions.cs" />
+    <Compile Include="Extensions\EventHandler\MouseEventHandlerExtensions.cs" />
+    <Compile Include="Extensions\Game\GameExtensions.cs" />
+    <Compile Include="Extensions\Rectangle\RectangleExtensions.cs" />
+    <Compile Include="Extensions\SpriteBatch\SpriteBatchExtensions.cs" />
+    <Compile Include="Extensions\String\StringExtensions.cs" />
+    <Compile Include="Extensions\Texture2D\Texture2DExtensions.cs" />
+    <Compile Include="Extensions\Vector2\Vector2Extensions.cs" />
+    <Compile Include="Graphics\TileableTexture.cs" />
+    <Compile Include="IniParser\Exceptions\ParsingException.cs" />
+    <Compile Include="IniParser\FileIniParser.cs" />
+    <Compile Include="IniParser\Helpers\Assert.cs" />
+    <Compile Include="IniParser\Model\Configuration\BaseIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\Configuration\DefaultIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\Configuration\IIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\IniData.cs" />
+    <Compile Include="IniParser\Model\KeyData.cs" />
+    <Compile Include="IniParser\Model\KeyDataCollection.cs" />
+    <Compile Include="IniParser\Model\SectionData.cs" />
+    <Compile Include="IniParser\Model\SectionDataCollection.cs" />
+    <Compile Include="IniParser\Parser\IniDataParser.cs" />
+    <Compile Include="IniParser\StreamIniDataParser.cs" />
+    <Compile Include="IniParser\StringIniParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Script\IScript.cs" />
+    <Compile Include="Script\SharpScript.cs" />
+    <Compile Include="States\EmptyState.cs" />
+    <Compile Include="States\FiniteStateMachine.cs" />
+    <Compile Include="States\IFiniteStateMachine.cs" />
+    <Compile Include="States\IState.cs" />
+    <Compile Include="Tweening\BaseTween.cs" />
+    <Compile Include="Tweening\Equations\Back.cs" />
+    <Compile Include="Tweening\Equations\Bounce.cs" />
+    <Compile Include="Tweening\Equations\Circ.cs" />
+    <Compile Include="Tweening\Equations\Cubic.cs" />
+    <Compile Include="Tweening\Equations\Elastic.cs" />
+    <Compile Include="Tweening\Equations\Expo.cs" />
+    <Compile Include="Tweening\Equations\Linear.cs" />
+    <Compile Include="Tweening\Equations\Quad.cs" />
+    <Compile Include="Tweening\Equations\Quart.cs" />
+    <Compile Include="Tweening\Equations\Quint.cs" />
+    <Compile Include="Tweening\Equations\Sine.cs" />
+    <Compile Include="Tweening\Paths\CatmullRom.cs" />
+    <Compile Include="Tweening\Paths\Linear.cs" />
+    <Compile Include="Tweening\Pool.cs" />
+    <Compile Include="Tweening\Primitives\MutableFloat.cs" />
+    <Compile Include="Tweening\Primitives\MutableInteger.cs" />
+    <Compile Include="Tweening\Timeline.cs" />
+    <Compile Include="Tweening\Tween.cs" />
+    <Compile Include="Tweening\TweenAccessor.cs" />
+    <Compile Include="Tweening\TweenCallback.cs" />
+    <Compile Include="Tweening\TweenEquation.cs" />
+    <Compile Include="Tweening\TweenEquations.cs" />
+    <Compile Include="Tweening\TweenManager.cs" />
+    <Compile Include="Tweening\TweenPath.cs" />
+    <Compile Include="Tweening\TweenPaths.cs" />
+    <Compile Include="Tweening\TweenUtils.cs" />
+    <Compile Include="Utilities\Randomizer.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

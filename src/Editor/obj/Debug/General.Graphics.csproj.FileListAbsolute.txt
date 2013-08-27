@@ -1,0 +1,13 @@
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\General.Graphics.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\General.Graphics.pdb
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\General.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\bin\Debug\General.pdb
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\obj\Debug\General.Graphics.csprojResolveAssemblyReference.cache
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\obj\Debug\General.Graphics.dll
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\Editor\obj\Debug\General.Graphics.pdb

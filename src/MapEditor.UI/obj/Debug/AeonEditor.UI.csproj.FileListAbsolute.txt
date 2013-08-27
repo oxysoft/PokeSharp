@@ -1,0 +1,8 @@
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\bin\Debug\AeonEditor.UI.exe
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\bin\Debug\AeonEditor.UI.pdb
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.Properties.Resources.resources
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.TestForm.resources
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.csproj.GenerateResource.Cache
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.exe
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.pdb
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Debug\AeonEditor.UI.csprojResolveAssemblyReference.cache

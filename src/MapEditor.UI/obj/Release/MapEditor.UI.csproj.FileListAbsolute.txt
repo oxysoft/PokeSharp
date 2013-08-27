@@ -1,0 +1,8 @@
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\bin\Release\MapEditor.UI.exe
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\bin\Release\MapEditor.UI.pdb
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\MapEditor.UI.csprojResolveAssemblyReference.cache
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\MapEditor.UI.Properties.Resources.resources
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\AeonEditor.UI.TestForm.resources
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\MapEditor.UI.csproj.GenerateResource.Cache
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\MapEditor.UI.exe
+C:\Users\Oxysoft\desktop\visual studio 2012\Projects\PokeSharp\AeonEditor.UI\obj\Release\MapEditor.UI.pdb
